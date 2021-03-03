@@ -26,7 +26,7 @@ export default class extends React.Component {
     console.log(weather);
     this.setState({ 
       isLoading: false,
-      condition: weather[0].main,
+      condition: "Drizzle",
       temp
      });
   };

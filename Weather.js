@@ -7,38 +7,51 @@ import {LinearGradient} from 'expo-linear-gradient';
 const weatherOption = {
     Haze : { // 안개
         icon : "weather-fog",
-        gradient :["#636FA4", "#E8CBC0"]
+        gradient :["#636FA4", "#E8CBC0"],
+        title : "Haze",
+        subtitle :"Just don't go outside"
     },
     Thunderstorm : {
         icon : "weather-lightning",
-        gradient:["#4e4376","#2b5876"]
+        gradient:["#4e4376","#2b5876"],
+        title : "Thundestorm in the house",
+        subtitle : "Actually, outside of the house"
     },
     Drizzle : {//이슬비
         icon : "weather-partly-cloudy",
-        gradient:["#076585","#fff"]
+        gradient:["#89F7FE","#66A6FF"],
+        title : "Drizzle",
+        subtitle : "Is like rain"
     },
     Rain:{
         icon :"weather-pouring",
-        gradient:["#2B32B2","#1488CC"]
+        gradient:["#2B32B2","#1488CC"],
+        title : "Raining like a MF",
+        subtitle : "For more info look outside"
     },
     Snow: {
         icon : "weather-snowy",
-        gradient:["#4e54c8","#8f94fb"]
+        gradient:["#4e54c8","#8f94fb"],
+        title : "Cold as balls",
+        subtitle : "Do you want to build a snowman? Fuck no"
     },
     Clear : {
         icon : "weather-sunny",
         gradient:["#0ED2F7","#B2FEFA"],
-        title : "Clear",
-        subtitle : "let's go outside."
+        title : "Sunny as fuck",
+        subtitle : "Go get your ass burnt"
     },
     Clouds :{
         icon :"weather-cloudy",
-        gradient:["#5B86E5","#36D1DC"]
+        gradient:["#5B86E5","#36D1DC"],
+        title : "Clouds",
+        subtitle : "I know, fucking boring"
     },
     Dust:{
         icon :"weather-cloudy-alert",
-        gradient:["#3C3B3F","#605C3C"]
-
+        gradient:["#4DA0B0","#D39D38"],
+        title:"Dusty",
+        subtitle : "Thanks a lot china"
     }
 }
 
