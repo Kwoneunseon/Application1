@@ -5,16 +5,40 @@ import {MaterialCommunityIcons} from "@expo/vector-icons";
 import {LinearGradient} from 'expo-linear-gradient';
 
 const weatherOption = {
-    Haze : {
-        icon : "weather-hail",
-        gradient :["#4DA0B0", "#D39D38"]
+    Haze : { // 안개
+        icon : "weather-fog",
+        gradient :["#636FA4", "#E8CBC0"]
     },
     Thunderstorm : {
-
+        icon : "weather-lightning",
+        gradient:["#4e4376","#2b5876"]
+    },
+    Drizzle : {//이슬비
+        icon : "weather-partly-cloudy",
+        gradient:["#076585","#fff"]
+    },
+    Rain:{
+        icon :"weather-pouring",
+        gradient:["#2B32B2","#1488CC"]
+    },
+    Snow: {
+        icon : "weather-snowy",
+        gradient:["#4e54c8","#8f94fb"]
     },
     Clear : {
         icon : "weather-sunny",
-        gradient:["#0ED2F7","#B2FEFA"]
+        gradient:["#0ED2F7","#B2FEFA"],
+        title : "Clear",
+        subtitle : "let's go outside."
+    },
+    Clouds :{
+        icon :"weather-cloudy",
+        gradient:["#5B86E5","#36D1DC"]
+    },
+    Dust:{
+        icon :"weather-cloudy-alert",
+        gradient:["#3C3B3F","#605C3C"]
+
     }
 }
 
@@ -23,9 +47,12 @@ export default function Weather({temp,condition}){
         <StatusBar barStyle="light-content"/>
         <View style={styles.half_container}>
             <MaterialCommunityIcons name ={weatherOption[condition].icon} color ="white"size ={116}/>
-            <Text style={styles.temp}>{temp}</Text>
+            <Text style={styles.temp}>{temp}°</Text>
         </View>
-        <View style={styles.half_container}/>
+        <View style={{...styles.half_container, ...styles.textContainer}}>
+            <Text style ={styles.title}>{weatherOption[condition].title}</Text>
+            <Text style={styles.subtitle}>{weatherOption[condition].subtitle}</Text>
+        </View>
     </LinearGradient>);
 }
 
@@ -60,5 +87,21 @@ const styles ={
         flex :1,
         justifyContent:"center",
         alignItems:"center"
+    },
+    title:{
+        color : "white",
+        fontSize : 44,
+        fontWeight : "300",
+        marginBottom : 10
+    },
+    subtitle : {
+        color : "white",
+        fontWeight : "600",
+        fontSize : 24
+    },
+    textContainer : {
+        paddingHorizontal : 20,
+        alignItems :"flex-start"
     }
+
 }
